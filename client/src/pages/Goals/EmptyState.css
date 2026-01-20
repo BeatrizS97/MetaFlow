@@ -1,0 +1,134 @@
+/* src/pages/Goals/components/EmptyState.css */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  margin: 2rem 0;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.empty-icon-container {
+  margin-bottom: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.empty-icon {
+  filter: drop-shadow(0 4px 20px rgba(255, 107, 157, 0.3));
+}
+
+.empty-state h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #2d2d2d;
+  margin: 0 0 1rem 0;
+}
+
+.empty-state > p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 2rem 0;
+}
+
+.btn-create-first {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  background: linear-gradient(135deg, #FF6B9D, #667EEA);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 30px rgba(255, 107, 157, 0.3);
+}
+
+.btn-create-first:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255, 107, 157, 0.4);
+}
+
+.empty-tips {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(255,165,0,0.1));
+  border-radius: 20px;
+  border: 2px dashed rgba(255, 165, 0, 0.3);
+  max-width: 500px;
+}
+
+.empty-tips h3 {
+  font-size: 1.2rem;
+  color: #2d2d2d;
+  margin: 0 0 1.5rem 0;
+}
+
+.empty-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.empty-tips li {
+  text-align: left;
+  color: #666;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .empty-state {
+    padding: 3rem 1.5rem;
+  }
+
+  .empty-state h2 {
+    font-size: 1.6rem;
+  }
+
+  .empty-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn-create-first {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .empty-tips {
+    width: 100%;
+  }
+}

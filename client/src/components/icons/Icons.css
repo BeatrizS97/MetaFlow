@@ -1,0 +1,282 @@
+/* src/components/Icons.css - Animações para os ícones personalizados */
+
+/* Sparkle Icon - Animação de brilho pulsante */
+.icon-sparkle {
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+  animation: sparkle-pulse 2s ease-in-out infinite;
+}
+
+@keyframes sparkle-pulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+  }
+  50% {
+    transform: scale(1.1) rotate(10deg);
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.9));
+  }
+}
+
+.sparkle-main {
+  animation: sparkle-twinkle 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.sparkle-small {
+  animation: sparkle-twinkle 1.5s ease-in-out infinite 0.3s;
+  transform-origin: center;
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* User Icon - Animação de hover */
+.icon-user {
+  transition: all 0.3s ease;
+}
+
+.icon-user:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.6));
+}
+
+/* Career Icon - Animação de gráfico subindo */
+.icon-career {
+  transition: all 0.3s ease;
+}
+
+.icon-career:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 4px 12px rgba(255, 107, 157, 0.5));
+}
+
+.icon-career path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-line 2s ease forwards;
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Target Icon - Animação de pulso */
+.icon-target {
+  animation: target-pulse 2s ease-in-out infinite;
+}
+
+@keyframes target-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 4px rgba(255, 107, 157, 0.4));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(255, 107, 157, 0.8));
+  }
+}
+
+/* Check Icon - Animação de check */
+.icon-check {
+  transition: all 0.3s ease;
+}
+
+.icon-check path {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+}
+
+.icon-check:hover path,
+.icon-check.active path {
+  animation: draw-check 0.5s ease forwards;
+}
+
+@keyframes draw-check {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Trash Icon - Animação de balanço */
+.icon-trash {
+  transition: all 0.3s ease;
+}
+
+.icon-trash:hover {
+  animation: trash-shake 0.5s ease;
+  color: #f87171;
+}
+
+@keyframes trash-shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+/* Logout Icon - Animação de saída */
+.icon-logout {
+  transition: all 0.3s ease;
+}
+
+.icon-logout:hover {
+  transform: translateX(3px);
+  filter: drop-shadow(0 0 8px rgba(255, 107, 157, 0.5));
+}
+
+/* Mail Icon - Animação de envelope */
+.icon-mail {
+  transition: all 0.3s ease;
+}
+
+.icon-mail:hover {
+  animation: mail-bounce 0.6s ease;
+}
+
+@keyframes mail-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Lock Icon - Animação de trava */
+.icon-lock {
+  transition: all 0.3s ease;
+}
+
+.icon-lock:hover {
+  animation: lock-wiggle 0.5s ease;
+}
+
+@keyframes lock-wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+/* Eye Icon - Animação de piscar */
+.icon-eye {
+  transition: all 0.3s ease;
+}
+
+.icon-eye:hover {
+  animation: eye-blink 0.6s ease;
+}
+
+@keyframes eye-blink {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.1); }
+}
+
+/* Eye Off Icon */
+.icon-eye-off {
+  transition: all 0.3s ease;
+}
+
+.icon-eye-off:hover {
+  transform: scale(1.1);
+}
+
+/* Plus Icon - Animação de rotação */
+.icon-plus {
+  transition: all 0.3s ease;
+}
+
+.icon-plus:hover {
+  transform: rotate(90deg) scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255, 107, 157, 0.5));
+}
+
+/* Close Icon - Animação de rotação */
+.icon-close {
+  transition: all 0.3s ease;
+}
+
+.icon-close:hover {
+  transform: rotate(90deg) scale(1.1);
+  color: #f87171;
+}
+
+/* Alert Icon - Animação de alerta */
+.icon-alert {
+  animation: alert-pulse 2s ease-in-out infinite;
+}
+
+@keyframes alert-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Rocket Icon - Animação de decolagem */
+.icon-rocket {
+  animation: rocket-launch 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 107, 157, 0.5));
+}
+
+@keyframes rocket-launch {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+}
+
+/* Heart Icon - Animação de batimento */
+.icon-heart {
+  animation: heart-beat 1.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 107, 157, 0.5));
+}
+
+@keyframes heart-beat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+/* Animações globais para ícones */
+svg {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efeito hover padrão para todos os ícones */
+.btn-action svg,
+.category-btn svg,
+.input-icon svg {
+  transition: all 0.3s ease;
+}
+
+.btn-action:hover svg {
+  transform: scale(1.15);
+}
+
+.category-btn:hover svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Ícones ativos */
+.btn-completed svg {
+  animation: success-bounce 0.5s ease;
+}
+
+@keyframes success-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
